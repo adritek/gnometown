@@ -1,0 +1,36 @@
+{
+  "name": "gulp-builder",
+  "version": "1.0.0",
+  "description": "My personsal gulp task runner",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp",
+    "taskrunner"
+  ],
+  "author": "Adrian Rogers",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^9.7.4",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.0.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-noop": "^1.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-size": "^3.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "postcss-assets": "^5.0.0",
+    "usedcss": "^1.0.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "browser-sync": "^2.26.7",
+    "gulp-babel": "^8.0.0-beta.2",
+    "gulp-uglify": "^3.0.2"
+  }
+}
