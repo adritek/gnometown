@@ -22,30 +22,24 @@ Install dependancies and build files
 ```
 npm intall
 gulp
-TODO -- don't forget to build prod
+```
+
+Build minified and babel'd JavaScript
+
+```
+gulp prod
 ```
 
 In your browser go to
 http://localhost:8000/
 
-## Running the tests
+## Tests with Jest
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+TODO
+Make sure the fetch returned successful
 
 ```
-Give an example
-```
-
-### And coding style tests
-
-TODO: Explain what these tests test and why
-
-```
-Chai tests -
+jest -c
 ```
 
 ## Deployment
@@ -59,3 +53,5 @@ Chai tests -
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+I want to make a ad for the cards (one ever x card) -- "Harry's +2 Constitution Juice" or something 5e ;)

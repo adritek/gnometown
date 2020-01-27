@@ -1,5 +1,6 @@
-// const gtown_url = 'https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json';
-const gtown_url = 'http://localhost:8000/src/js/local.json';
+const gtown_url = 'https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json';
+// For local development - I was on my way to DevConf2020 😃
+// const gtown_url = 'http://localhost:8000/src/js/local.json';
 let payload;
 
 function status(response) {
@@ -13,7 +14,9 @@ function status(response) {
 function json(response) {
   return response.json();
 }
+
 fetch(gtown_url)
+  .then(status)
   .then(response => response.json())
   .then(function(data) {
     payload = data.Brastlewark;
@@ -24,12 +27,14 @@ fetch(gtown_url)
     console.error('Request failed', error);
   });
 
+// get initial info on the page
 function showGnomes(data) {
   document.querySelector('.card-columns').innerHTML = `
     ${data.map(template).join('')}
   `;
 }
 
+// just makes a list
 function lists(lists) {
   return `
   <ul class="listOut">
@@ -38,6 +43,7 @@ function lists(lists) {
   `;
 }
 
+// card template
 function template(data) {
   return `
   <div class="card">
@@ -58,6 +64,7 @@ function showProfessions(data) {
   getAllProf(data);
 }
 
+// add all professions to a Set - non duplicates items
 function getAllProf(data) {
   let reformattedArray = data.map(obj => {
     let rObj = {};
@@ -80,10 +87,9 @@ function registerBtns() {
   );
 }
 
+// loop through trades and make a list of buttons
 function makeTradeBtns(tradeSet) {
   const tradeArr = [...tradeSet];
-
-  // loop through trades and make a list
   const listItems = tradeArr.reduce((result, item) => {
     result += `<button>${item}</button>`;
     return result;

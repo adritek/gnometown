@@ -1,4 +1,17 @@
+/* RGB */
+$color1: rgba(85, 221, 224, 1);
+$color2: rgba(51, 101, 138, 1);
+$color3: rgba(47, 72, 88, 1);
+$color4: rgba(246, 174, 45, 1);
+$color5: rgba(242, 100, 25, 1);
+
 html body {
-  background-color: yellow;
+  background-color: $color4;
   font-family: 'Acme', sans-serif;
+}
+#dropdown-menu-trades {
+  background-color: $color1;
+}
+button {
+  width: 100%;
 }

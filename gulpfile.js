@@ -6,7 +6,8 @@
     // directory locations
     dir = {
       src: 'src/',
-      build: 'build/'
+      distCSS: 'dist/css/',
+      distJS: 'dist/js/'
     },
     // el modules
     gulp = require('gulp'),
@@ -17,7 +18,7 @@
     sass = require('gulp-sass'),
     postcss = require('gulp-postcss'),
     babel = require('gulp-babel'),
-    uglify = require('gulp-uglify'),
+    uglify = require('gulp-terser'),
     sourcemaps = devBuild ? require('gulp-sourcemaps') : null,
     browsersync = devBuild ? require('browser-sync').create() : null;
   console.log('Gulp', devBuild ? 'development' : 'production', 'build');
@@ -42,7 +43,7 @@
   const cssConfig = {
     src: dir.src + 'scss/main.scss',
     watch: dir.src + 'scss/**/*',
-    build: dir.build + 'css/',
+    build: dir.distCSS,
     sassOpts: {
       sourceMap: devBuild,
       imagePath: '/images/',
@@ -82,7 +83,7 @@
       .src(dir.src + 'js/scripts.js')
       .pipe(babel())
       .pipe(uglify())
-      .pipe(gulp.dest(dir.build + 'js/bundle.js')); //bundle (for browserify)
+      .pipe(gulp.dest(dir.distJS)); //bundle (for browserify if you're using it)
   });
   /**************** server task (private) ****************/
   const syncConfig = {

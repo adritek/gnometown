@@ -12,7 +12,7 @@
 
 # Ignore node_modules and build folder
 node_modules/
-build/
+dist/
 
 # Ignore all text files
 *.txt
