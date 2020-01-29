@@ -35,7 +35,7 @@ http://localhost:8000/
 
 ## Tests with Jest
 
-TODO
+TODO:
 Make sure the fetch returned successful
 
 ```
@@ -54,4 +54,12 @@ jest -c
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-I want to make a ad for the cards (one ever x card) -- "Harry's +2 Constitution Juice" or something 5e ;)
+## Notes and future versions
+
+Ads - I want add advertisements (one ad ever x cards) -- "Harry's +2 Constitution Juice" or some item from 5e ;). Also I'm sure the ad council of Brastlewark (as in real life) would want some ad injection.
+
+Lazy loading or pagination - Limit the first set of payload items, less of a shock to mobile (data).
+
+Browserify - some kind of bundler, separate out files. ES6 modules?
+
+Images - (Nice to have) standardise image size (4:3)?
